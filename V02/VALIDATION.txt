@@ -1,0 +1,6 @@
+v0.2 validation against available 34401A dumps
+
+old.bin: 512 bytes; checksums 9/9 PASS; readable pairs calculated 29
+caldump_08-05-02.bin: 512 bytes; checksums 9/9 PASS; readable pairs calculated 29
+34401_eeprom_mankan_v11-05-02.bin: 512 bytes; checksums 9/9 PASS; readable pairs calculated 29
+caldump11-5-2.bin: 512 bytes; checksums 9/9 PASS; readable pairs calculated 29

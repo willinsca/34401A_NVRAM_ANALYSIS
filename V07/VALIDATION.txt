@@ -1,0 +1,20 @@
+v0.7 validation
+
+Static checks:
+  - Python source compiled successfully.
+  - SCPI Command Console uses an editable script and executes parsed non-comment lines in order.
+  - Local console *IDN? test uses the same serial_open / serial_send / 300 ms delay / CR-line read path as the Dump Reader.
+  - CAL:STR helper writes its generated lines into the editable console script.
+  - Console logs mask CAL:SEC:STAT security code parameters.
+
+Dump-file checks:
+  - old.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440128 May 1999 CALIBRATED'; 29 Q23 model values calculated.
+  - caldump_08-05-02.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440128 May 1999 CALIBRATED'; 29 Q23 model values calculated.
+  - 34401_eeprom_mankan_v11-05-02.bin: 512 bytes; 9/9 checksum PASS; cal string='HP034401 8 JUL 2001 25.1C'; 29 Q23 model values calculated.
+  - caldump11-5-2.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440118 JUL 2005 25.2C'; 29 Q23 model values calculated.
+
+Console simulation:
+  - Editable script with comment + 7 SCPI lines executed in exact order.
+  - CAL:STR write / CAL:STR? / SYST:ERR? replies were logged and verified by the fake instrument.
+  - Local console *IDN? sent only *IDN? and passed using the same serial primitives as the Dump Reader.
+  - Security code was masked in console logs.

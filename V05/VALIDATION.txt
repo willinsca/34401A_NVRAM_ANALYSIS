@@ -1,0 +1,13 @@
+v0.5 validation
+
+Static checks:
+  - Python source compiled successfully.
+  - CAL:STR assistant supports printable ASCII strings up to 40 characters.
+  - Dump-source selection exposes a modeled full-scale reference but keeps CAL:VAL non-sendable until a real external-standard value is entered.
+  - CAL:STR output is generated as SCPI lines only (no PuTTY-breaking explanatory comments).
+
+Dump-file checks:
+  - old.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440128 May 1999 CALIBRATED'; 29 modeled-reference values calculated.
+  - caldump_08-05-02.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440128 May 1999 CALIBRATED'; 29 modeled-reference values calculated.
+  - 34401_eeprom_mankan_v11-05-02.bin: 512 bytes; 9/9 checksum PASS; cal string='HP034401 8 JUL 2001 25.1C'; 29 modeled-reference values calculated.
+  - caldump11-5-2.bin: 512 bytes; 9/9 checksum PASS; cal string='HP03440118 JUL 2005 25.2C'; 29 modeled-reference values calculated.

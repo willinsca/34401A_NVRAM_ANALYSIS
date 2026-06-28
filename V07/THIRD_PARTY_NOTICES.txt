@@ -1,0 +1,20 @@
+Third-party / source attribution
+
+Serial dump protocol basis:
+HPAK34401ACalTool 1.2 (user-supplied source archive)
+Copyright (c) 2026 squad
+License: MIT
+
+The supplied tool's core dump behavior uses:
+- 9600 8N2, DTR/DSR serial setup;
+- SYST:RWL;
+- DIAG:PEEK? -1,<0..255>,0;
+- SYST:LOC;
+- default output file caldump.bin.
+
+This GUI reimplements the read-only dump protocol in Python with a graphical interface,
+COM-port enumeration, progress, and checksum validation.
+
+The v0.7 SCPI Command Console reuses the same serial transport settings and CR-line
+read logic. It executes the exact text present in its editable command script after
+a confirmation dialog. It does not implement HPAK flash mode.

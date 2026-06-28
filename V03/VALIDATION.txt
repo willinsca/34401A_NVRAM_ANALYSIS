@@ -1,0 +1,5 @@
+v0.3 parser and candidate-view validation
+old.bin: 512 bytes; 9-block checksum results = 9/9 PASS; candidate records rendered = 29
+caldump_08-05-02.bin: 512 bytes; 9-block checksum results = 9/9 PASS; candidate records rendered = 29
+34401_eeprom_mankan_v11-05-02.bin: 512 bytes; 9-block checksum results = 9/9 PASS; candidate records rendered = 29
+caldump11-5-2.bin: 512 bytes; 9-block checksum results = 9/9 PASS; candidate records rendered = 29

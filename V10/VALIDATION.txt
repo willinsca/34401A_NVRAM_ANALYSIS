@@ -1,0 +1,17 @@
+v0.10 validation
+
+Static checks:
+  - Python source compiled successfully.
+  - New primary dump default method uses decode_cal_string_info(...).preferred_string.
+  - CAL Assistant loader blocks when no primary dump is loaded.
+  - CAL Assistant loader blocks when Candidate function/range or numeric Actual applied standard value is missing.
+  - CAL Assistant loader regenerates the block immediately before loading it into the Console editor.
+
+Existing dump decode checks:
+  - old.bin: 9/9 checksum PASS; default helper payload='28 May 1999 CALIBRATED'.
+  - caldump_08-05-02.bin: 9/9 checksum PASS; default helper payload='28 May 1999 CALIBRATED'.
+  - 34401_eeprom_mankan_v11-05-02.bin: 9/9 checksum PASS; default helper payload='8 JUL 2001 25.1C'.
+  - caldump11-5-2.bin: 9/9 checksum PASS; default helper payload='18 JUL 2005 25.2C'.
+
+Primary-default harness: loaded '28 May 1999 CALIBRATED' into Cal String to Write and regenerated the Console template.
+CAL Assistant gate: required setup messages and candidate/value confirmation are present.
