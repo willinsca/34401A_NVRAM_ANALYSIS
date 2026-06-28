@@ -1195,7 +1195,7 @@ class NvramViewer(tk.Tk):
 
     def validate_calstr_entry(self, proposed: str) -> bool:
         """Tk Entry-level hard limit: block invalid keystrokes/paste at 40 printable ASCII chars."""
-        if len(proposed) > 40:
+        if len(proposed) > 4:
             self.bell()
             return False
         for character in proposed:
@@ -1207,7 +1207,7 @@ class NvramViewer(tk.Tk):
     def validate_calstr_text(self, text: str) -> Optional[str]:
         if not text:
             return "Cal String to Write is empty. Open a primary dump to load its current payload, or enter 1–40 printable ASCII characters."
-        if len(text) > 40:
+        if len(text) > 4:
             return f"Cal String to Write is {len(text)} characters. Maximum is 40."
         if "'" in text:
             return "Single quote is not allowed because the helper emits a single-quoted SCPI string literal."
