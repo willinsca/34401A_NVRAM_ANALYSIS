@@ -986,7 +986,7 @@ class NvramViewer(tk.Tk):
         helper.pack(fill="x", padx=8, pady=3)
         helper.columnconfigure(1, weight=1)
 
-        ttk.Label(helper, text="Cal String to Write:").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=2)
+        ttk.Label(helper, text="Cal String :").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=2)
         vcmd = (self.register(self.validate_calstr_entry), "%P")
         self.calstr_entry = ttk.Entry(
             helper,
@@ -998,9 +998,9 @@ class NvramViewer(tk.Tk):
         self.calstr_entry.grid(row=0, column=1, sticky="w", pady=2)
         self.calstr_entry.bind("<Return>", lambda event: self.generate_calstr_commands())
         ttk.Label(helper, textvariable=self.calstr_count_var, width=18).grid(row=0, column=2, sticky="w", padx=(8, 0), pady=2)
-        ttk.Button(helper, text="UPDATE TEMPLATE", command=self.generate_calstr_commands).grid(row=0, column=3, padx=(8, 0), pady=2)
-        ttk.Button(helper, text="Use primary", command=lambda: self.load_calstr_from_dump(False)).grid(row=0, column=4, padx=(8, 0), pady=2)
-        ttk.Button(helper, text="Use compare", command=lambda: self.load_calstr_from_dump(True)).grid(row=0, column=5, padx=(6, 0), pady=2)
+      # ttk.Button(helper, text="UPDATE TEMPLATE", command=self.generate_calstr_commands).grid(row=0, column=3, padx=(8, 0), pady=2)
+      # ttk.Button(helper, text="Use primary", command=lambda: self.load_calstr_from_dump(False)).grid(row=0, column=4, padx=(8, 0), pady=2)
+      # ttk.Button(helper, text="Use compare", command=lambda: self.load_calstr_from_dump(True)).grid(row=0, column=5, padx=(6, 0), pady=2)
 
         ttk.Label(helper, text="Security code:").grid(row=1, column=0, sticky="w", padx=(0, 8), pady=2)
         ttk.Entry(helper, textvariable=self.calstr_security_code_var, width=18).grid(row=1, column=1, sticky="w", pady=2)
